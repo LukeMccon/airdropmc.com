@@ -22,6 +22,7 @@
   margin: 0 0 1rem;
   line-height: 1.15;
   font-size: 3.6rem;
+  font-family: Roboto;
 }
 
 .title {
@@ -33,6 +34,9 @@
   text-align: center;
 }
 
+.subTitle {
+  font-family: Roboto;
+}
 
 .description {
   line-height: 1.5;
@@ -88,4 +92,13 @@
     width: 100%;
     flex-direction: column;
   }
+}
+
+.icon {
+  color: white;
+}
+
+.icon:hover {
+  color: #4287f5;
+  cursor: pointer;
 }

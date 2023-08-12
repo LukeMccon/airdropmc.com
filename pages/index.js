@@ -1,9 +1,22 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
+import { BsDownload, BsGithub } from 'react-icons/bs';
+import bg from '../public/bkg.png'
+import Link from 'next/link';
+
+const iconEffect = 'transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110';
 
 export default function Home() {
+
   return (
-    <div className={styles.container}>
+    <div className={styles.container} style={{
+      backgroundImage: `url(${bg.src})`,
+      width: '100%',
+      height: '100%',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+    }}>
+      
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
@@ -11,57 +24,27 @@ export default function Home() {
 
       <main>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Airdrop
         </h1>
-
-        <p className={styles.description}>
-          Get started by editing <code>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+        {/* <h4 className={styles.subTitle}>From Sky to Inventory!</h4> */}
+        &nbsp;
+        <div className="grid grid-cols-2 gap-6">
+          <div className={`${styles.icon} ${iconEffect}`}>
+            <Link href="https://github.com/LukeMccon/Airdrop">
+              <BsGithub size={40}/>
+            </Link>
+          </div>
+          <div className={`${styles.icon} ${iconEffect}`}>
+            <Link href="https://github.com/LukeMccon/Airdrop/releases/latest">
+              <BsDownload size={40} />
+            </Link>
+          </div>
         </div>
       </main>
 
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel" className={styles.logo} />
-        </a>
-      </footer>
-
       <style jsx>{`
         main {
+          color: white;
           padding: 5rem 0;
           flex: 1;
           display: flex;
