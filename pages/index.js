@@ -18,7 +18,7 @@ export default function Home() {
     }}>
       
       <Head>
-        <title>Create Next App</title>
+        <title>Airdrop</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
