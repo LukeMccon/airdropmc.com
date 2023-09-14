@@ -1,5 +1,5 @@
 data "vercel_project_directory" "project_files" {
-  path = "../"
+  path = "./"
 }
 
 resource "vercel_project" "project" {
