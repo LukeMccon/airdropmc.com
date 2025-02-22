@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import { BsDownload, BsGithub } from 'react-icons/bs';
+import ModrinthIcon from '../components/ModrinthIcon';
 import bg from '../public/bkg.png'
 import Link from 'next/link';
 
@@ -26,17 +27,24 @@ export default function Home() {
         <h1 className={styles.title}>
           Airdrop
         </h1>
-        {/* <h4 className={styles.subTitle}>From Sky to Inventory!</h4> */}
-        &nbsp;
-        <div className="grid grid-cols-2 gap-6">
-          <div className={`${styles.icon} ${iconEffect}`}>
+        <h4 className={styles.subTitle}><i>from the skies!</i></h4>
+        <div className="grid grid-cols-3 gap-6">
+          <div className={`${styles.icon} ${iconEffect} group relative`}>
             <Link href="https://github.com/LukeMccon/Airdrop">
               <BsGithub size={40}/>
+              <span className="absolute top-12 left-1/2 -translate-x-1/2 hidden group-hover:block bg-gray-800 text-white text-sm rounded px-2 py-1">Github</span>
             </Link>
           </div>
-          <div className={`${styles.icon} ${iconEffect}`}>
+          <div className={`${styles.icon} ${iconEffect} group relative`}>
             <Link href="https://github.com/LukeMccon/Airdrop/releases/latest">
               <BsDownload size={40} />
+              <span className="absolute top-12 left-1/2 -translate-x-1/2 hidden group-hover:block bg-gray-800 text-white text-sm rounded px-2 py-1">Download</span>
+            </Link>
+          </div>
+          <div className={`${styles.icon} ${iconEffect} group relative`}>
+            <Link href="https://modrinth.com/plugin/airdrop">
+              <ModrinthIcon size={40} />
+              <span className="absolute top-12 left-1/2 -translate-x-1/2 hidden group-hover:block bg-gray-800 text-white text-sm rounded px-2 py-1">Modrinth</span>
             </Link>
           </div>
         </div>
